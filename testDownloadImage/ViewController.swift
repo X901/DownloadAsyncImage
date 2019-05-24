@@ -27,7 +27,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "toVc2", sender: nil)
+        
+        if self.iconImage.image != nil {
+            self.performSegue(withIdentifier: "toVc2", sender: nil)
+        } else {
+            print("wait until image downloaded frist !")
+        }
         
     }
     
