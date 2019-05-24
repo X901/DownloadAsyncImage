@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UEw-yj-ECT">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="fdF-K8-hbq">
+            <objects>
+                <viewController id="LCF-5d-dhs" customClass="ViewController" customModule="testDownloadImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qhy-Nt-IQW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkF-iC-983">
+                                <rect key="frame" x="171" y="433" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="LCF-5d-dhs" eventType="touchUpInside" id="i6s-go-AtR"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VhR-fL-a31">
+                                <rect key="frame" x="41" y="124" width="333" height="251"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="251" id="2D8-mM-jUM"/>
+                                    <constraint firstAttribute="width" constant="333" id="Zbe-4K-NRw"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VhR-fL-a31" firstAttribute="leading" secondItem="uP8-no-yZW" secondAttribute="leading" constant="41" id="DWz-Yw-0DK"/>
+                            <constraint firstItem="VhR-fL-a31" firstAttribute="top" secondItem="uP8-no-yZW" secondAttribute="top" constant="36" id="IB5-6q-6pa"/>
+                            <constraint firstItem="uP8-no-yZW" firstAttribute="trailing" secondItem="VhR-fL-a31" secondAttribute="trailing" constant="40" id="Nf9-0Q-lYU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uP8-no-yZW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Gls-4a-cbr"/>
+                    <connections>
+                        <outlet property="iconImage" destination="VhR-fL-a31" id="M64-JO-MbF"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toVc2" id="N44-GC-7TF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="31s-rg-PyV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="272.46376811594206" y="136.60714285714286"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController2" customModule="testDownloadImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="86t-JQ-sIM">
+                                <rect key="frame" x="40.5" y="349.5" width="333" height="251"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="333" id="b0F-gD-M7n"/>
+                                    <constraint firstAttribute="height" constant="251" id="bhL-Cw-gol"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="86t-JQ-sIM" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="MbS-BM-wP1"/>
+                            <constraint firstItem="86t-JQ-sIM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="i8J-jh-71w"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="downloadedImageView" destination="86t-JQ-sIM" id="zZ2-gL-GUk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="J90-BI-Cql">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UEw-yj-ECT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lze-2r-mXM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LCF-5d-dhs" kind="relationship" relationship="rootViewController" id="ANN-Ob-MK6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WvY-4i-mPe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-637.68115942028987" y="136.60714285714286"/>
+        </scene>
+    </scenes>
+</document>
